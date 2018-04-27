@@ -28,6 +28,7 @@ public class LifeCycleEx6 extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		System.out.println("init");
 	}
 
 	/**
@@ -35,6 +36,7 @@ public class LifeCycleEx6 extends HttpServlet {
 	 */
 	public void destroy() {
 		// TODO Auto-generated method stub
+		System.out.println("destory");
 	}
 
 	/**
@@ -43,6 +45,8 @@ public class LifeCycleEx6 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("doGet");
+		
 	}
 
 	/**
@@ -51,6 +55,18 @@ public class LifeCycleEx6 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		System.out.println("doPost");	
+	}	
+	
+	@PostConstruct
+	private void initPostConstruct() {
+		System.out.println("initPostConstruct");
 	}
-
+	
+	@PreDestory
+	private void destoryPreDestory() {
+		System.out.println("preDestory");
+	}
 }
+
+
