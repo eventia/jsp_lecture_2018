@@ -55,6 +55,27 @@ public class LifeCycleEx extends HttpServlet {
 		System.out.println("destroy");
 	}
 	
+	@PostConstruct 
+	private void initPostConstruct() {
+		System.out.println("initPostConstruct");
+	}
 	
-
+	@PreDestory
+	private void destoryPreDestory() {
+		System.out.println("destoryPreDestory");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+//		super.init();
+		System.out.println("init");
+	}
+	
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+//		super.destroy();
+		System.out.println("destroy");
+	}
 }
