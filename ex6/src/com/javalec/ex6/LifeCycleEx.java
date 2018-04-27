@@ -1,4 +1,4 @@
-package com.javalec.ex;
+package com.javalec.ex6;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloWorld
+ * Servlet implementation class LifeCycleEx
  */
-@WebServlet("/HW")
-public class HelloWorld extends HttpServlet {
+@WebServlet("/LifeCycleEx")
+public class LifeCycleEx extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloWorld() {
+    public LifeCycleEx() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,9 +27,9 @@ public class HelloWorld extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("HelloWorld~~~~");
-		// Print in Console 
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("doGet");
+
 	}
 
 	/**
@@ -37,7 +37,24 @@ public class HelloWorld extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		System.out.println("doPost");
+		// doGet(request, response);
 	}
+	
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+//		super.init();
+		System.out.println("init");
+	}
+	
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+//		super.destroy();
+		System.out.println("destroy");
+	}
+	
+	
 
 }
