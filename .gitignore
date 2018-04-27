@@ -1,5 +1,5 @@
 /Servers
 /RemoteSystemsTempFiles
 /.metadata
-
 /.recommenders/
+!.gitignore
