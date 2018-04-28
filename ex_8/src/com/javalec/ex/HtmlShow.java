@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class HtmlShow
  */
 //@WebServlet("/HS")
+@WebServlet(urlPatterns={"/HS"}, initParams={@WebInitParam(name="id", value="abcdef"), @WebInitParam(name="pw", value="1234"), @WebInitParam(name="path", value="C:\\javalec\\workspace")})
 public class HtmlShow extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -36,7 +38,7 @@ public class HtmlShow extends HttpServlet {
 		String pw = getInitParameter("pw");
 		String path = getInitParameter("path");
 		
-		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("text/html; charset=EUC-KR");
 		PrintWriter writer = response.getWriter();
 		writer.println("<html><head></head><body>");
 		writer.println("¾ÆÀÌµð : " + id + "<br />");
