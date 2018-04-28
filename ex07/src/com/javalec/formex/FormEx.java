@@ -44,8 +44,8 @@ public class FormEx extends HttpServlet {
 //		doGet(request, response);
 		System.out.println("doPost2");
 		
-//		request.setCharacterEncoding("UTF-8");
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
+//		request.setCharacterEncoding("EUC-KR");
 		
 		String name = request.getParameter("name");
 		String id = request.getParameter("id");
