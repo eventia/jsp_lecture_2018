@@ -1,8 +1,6 @@
-package com.javalec.ex6;
+package com.javalec.ex06;
 
 import java.io.IOException;
-
-import javax.security.auth.DestroyFailedException;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LifeCycleEx6
+ * Servlet implementation class LifeCycle
  */
 @WebServlet("/LC")
-public class LifeCycleEx6 extends HttpServlet {
+public class LifeCycle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LifeCycleEx6() {
+    public LifeCycle() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,19 +26,30 @@ public class LifeCycleEx6 extends HttpServlet {
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
+    
+    /*
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
 		System.out.println("init");
+		// TODO Auto-generated method stub
+	}
+	*/
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		System.out.println("init");
+		
 	}
 
 	/**
 	 * @see Servlet#destroy()
 	 */
-	
 	public void destroy() {
 		// TODO Auto-generated method stub
 		System.out.println("destory");
 	}
+	
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,18 +67,8 @@ public class LifeCycleEx6 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		System.out.println("doPost");	
-	}	
-	
-	@PostConstruct
-	private void initPostConstruct() {
-		System.out.println("initPostConstruct");
+		System.out.println("doPost");
+		
 	}
-	
-	@PreDestory
-	private void destoryPreDestory() {
-		System.out.println("preDestory");
-	}
+
 }
-
-
