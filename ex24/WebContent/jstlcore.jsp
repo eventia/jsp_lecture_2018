@@ -36,7 +36,7 @@
 	<hr />
 
 	<c:forEach var="fEach" begin="0" end="30" step="3">
-		${fEach}
+		${fEach} <br/>
 	</c:forEach>
 
 </body>
