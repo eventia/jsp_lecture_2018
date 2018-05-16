@@ -1,4 +1,8 @@
-﻿[단어설명]
+﻿zbc18 : DB생성 // ID,PW = oracle , oracle
+DB Listener : 1521 , Transaction Server : 2030 , HTTP Listener : 8081
+
+
+[단어설명]
 
 Annotation : 사전적의미 주석, 컴파일 혹은 런타임에 해석, 메타데이터(실제데이터가 아닌 Data를 위한 데이터)로 JDK5부터 등장
 
