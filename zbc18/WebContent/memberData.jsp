@@ -13,8 +13,8 @@
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	String uid = "scott";
 	String upw = "tiger";
-	String query = "select * from member";
-%>
+	String query = "select * from jsp_member";
+%> 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -25,6 +25,7 @@
 <body>
 
 <%
+// JDBC Example
 	try{
  	  Class.forName(driver);
 	  connection = DriverManager.getConnection(url, uid, upw);
