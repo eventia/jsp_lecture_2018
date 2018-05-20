@@ -67,6 +67,7 @@
 		%>
 <% 
 //  hidden 타입으로 id 전송
+//  
 %>
 		<input type="hidden" name="id" value=<%=id %>>
 		<input type="submit" value="정보수정"> <input type="reset" value="취소">
