@@ -56,7 +56,7 @@ public class LogInOk extends HttpServlet {
 		id = request.getParameter("id");
 		pw = request.getParameter("pw");
 		
-		String query = "select * from member where id = '" + id + "' and pw = '" + pw + "'";
+		String query = "select * from jsp_address where id = '" + id + "' and pw = '" + pw + "'";
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

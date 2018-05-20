@@ -2,7 +2,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -12,8 +11,7 @@
     	ResultSet resultSet;
     
     	String name, id, pw, phone1, phone2, phone3, gender;
-    %>
-    
+    %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,7 +23,7 @@
 	<%
 		id = (String)session.getAttribute("id");
 	
-		String query = "select * from member where id = '" + id + "'";
+		String query = "select * from jsp_address where id = '" + id + "'";
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe" , "scott" , "tiger");
@@ -40,6 +38,7 @@
 			phone3 = resultSet.getString("phone3");
 			gender = resultSet.getString("gender");
 		}
+		
 	%>
 	
 	<form action="ModifyOk" method="post">
@@ -66,6 +65,10 @@
 		<%
 			}
 		%>
+<% 
+//  hidden 타입으로 id 전송
+%>
+		<input type="hidden" name="id" value=<%=id %>>
 		<input type="submit" value="정보수정"> <input type="reset" value="취소">
 	</form>
 

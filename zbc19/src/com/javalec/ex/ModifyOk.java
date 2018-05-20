@@ -25,8 +25,7 @@ public class ModifyOk extends HttpServlet {
 	private String name, id, pw, phone1, phone2, phone3, gender;
 	
 	HttpSession httpSession;
-	
-    /**
+	 /**
      * @see HttpServlet#HttpServlet()
      */
     public ModifyOk() {
@@ -39,7 +38,6 @@ public class ModifyOk extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		actionDo(request, response);
-
 	}
 
 	/**
@@ -47,7 +45,6 @@ public class ModifyOk extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		actionDo(request, response);
-
 	}
 
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -65,8 +62,9 @@ public class ModifyOk extends HttpServlet {
 		
 		if(pwConfirm()){
 			System.out.println("OK");
+			System.out.println("id=" + id);
 			
-			String query = "update member set name ='" + name + "', phone1= '" + phone1 + "', phone2 = '" + phone2 + "', phone3 = '" + phone3 + "', gender = '" + gender + "'";
+			String query = "update jsp_address set name ='" + name + "', phone1= '" + phone1 + "', phone2 = '" + phone2 + "', phone3 = '" + phone3 + "', gender = '" + gender + "' where id = '" + id + "'";
 //			String query = "update member set name ='"
 //					+ name + "', phone1= '" + phone1 + "', phone2 = '" + phone2 + "', phone3 = '" + phone3 + "', gender = '"
 //					+ gender + "' where id = '" + id +"'";			

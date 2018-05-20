@@ -63,10 +63,10 @@ public class JoinOk extends HttpServlet {
 		phone3 = request.getParameter("phone3");
 		gender = request.getParameter("gender");
 		
-//		String query = "insert into member values('" + name + "', '" + id + "', '" + pw + "', '" + phone1 + "', '" + phone2 + "', '"+ phone3 + "', '" + gender + "')";
+		String query = "insert into jsp_address values('" + name + "', '" + id + "', '" + pw + "', '" + phone1 + "', '" + phone2 + "', '"+ phone3 + "', '" + gender + "')";
 //		String query = "insert into member values('" + id + "', '" + name + "', '" + pw + "', '" + phone1 + "', '" + phone2 + "', '"+ phone3 + "', '" + gender + "')";		
-		String query = "insert into member (id, name, pw, phone1, phone2, phone3, gender) values('"
-						+ id + "', '" + name + "', '" + pw + "', '" + phone1 + "', '" + phone2 + "', '"+ phone3 + "', '" + gender + "')";
+//		String query = "insert into jsp_address (id, name, pw, phone1, phone2, phone3, gender) values('"
+//						+ id + "', '" + name + "', '" + pw + "', '" + phone1 + "', '" + phone2 + "', '"+ phone3 + "', '" + gender + "')";
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
