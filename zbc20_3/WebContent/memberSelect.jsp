@@ -12,8 +12,10 @@
 <body>
 
 	<%
+//		out.println("Start of File" );
 		MemberDAO memberDAO = new MemberDAO();
 		ArrayList<MemberDTO> dtos = memberDAO.memberSelect();
+//		out.println("dtos size = "+dtos.size());
 		
 		for(int i=0; i<dtos.size(); i++) {
 			MemberDTO dto = dtos.get(i);
@@ -25,6 +27,7 @@
 			
 			out.println("이름 : " + name + ", 아이디 : " + id + ", 비밀번호 : " + pw + ", 연락처 : " + phone + ",  성별 : " + gender + "<br />" );
 		}
+//		out.println("End of File" );
 		
 	%>
 
