@@ -206,7 +206,7 @@ public class MemberDao {
 		Connection connection = null;
 		try {
 			context = new InitialContext();
-			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/Oracle11g");
+			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/orcl");
 			connection = dataSource.getConnection();
 		} catch (Exception e) {
 			e.printStackTrace();
