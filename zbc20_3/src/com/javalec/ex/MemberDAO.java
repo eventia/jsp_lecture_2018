@@ -28,7 +28,9 @@ public class MemberDAO {
 		
 		try {
 			Context context = new InitialContext();
-			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/Oracle11g");
+//			Context envCtx = (Context) context.lookup("java:comp/env");
+//			dataSource = (DataSource) envCtx.lookup("jdbc/orcl");
+			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/orcl");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,8 +48,8 @@ public class MemberDAO {
 //			con = DriverManager.getConnection(url, uid, upw);
 			con = dataSource.getConnection();
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("select * from dbcptest");
-//			rs = stmt.executeQuery("select * from memberforpre");			
+//			rs = stmt.executeQuery("select * from dbcptest");
+			rs = stmt.executeQuery("select * from member");			
 			
 			while (rs.next()) {
 				String name = rs.getString("name");

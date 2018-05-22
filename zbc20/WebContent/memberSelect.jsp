@@ -12,8 +12,10 @@
 <body>
 
 	<%
+	
 		MemberDAO memberDAO = new MemberDAO();
 		ArrayList<MemberDTO> dtos = memberDAO.memberSelect();
+		
 		
 		for(int i=0; i<dtos.size(); i++) {
 			MemberDTO dto = dtos.get(i);

@@ -6,19 +6,33 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+
+
+
+
 public class MemberDAO {
 
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String uid = "scott";
 	private String upw = "tiger";
 	
+
+	
 	public MemberDAO(){
+
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
 	}
+
+	
+	
+	
+	
+	
+	
 	
 	public ArrayList<MemberDTO> memberSelect() {
 		
@@ -29,10 +43,13 @@ public class MemberDAO {
 		ResultSet rs = null;
 		
 		try {
+			
 			con = DriverManager.getConnection(url, uid, upw);
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("select * from member");
+			rs = stmt.executeQuery("select * from dbcptest");
+//			rs = stmt.executeQuery("select * from member");	
 			
+
 			while (rs.next()) {
 				String name = rs.getString("name");
 				String id = rs.getString("id");
