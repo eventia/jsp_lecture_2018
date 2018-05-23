@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -13,15 +13,15 @@
 		String pw = request.getParameter("pw");
 	%>
 	
-	¾ÆÀÌµğ : <%= id %> <br />
-	ºñ¹Ğ¹øÈ£ : <%= pw %>
+	ì•„ì´ë”” : <%= id %> <br />
+	ë¹„ë°€ë²ˆí˜¸ : <%= pw %>
 	
 	<hr />
 	
-	¾ÆÀÌµğ : ${ param.id } <br />
-	ºñ¹Ğ¹øÈ£ : ${ param.pw } <br />
-	¾ÆÀÌµğ : ${ param["id"] } <br />
-	ºñ¹Ğ¹øÈ£ : ${ param["pw"] }
+	ì•„ì´ë”” : ${ param.id } <br />
+	ë¹„ë°€ë²ˆí˜¸ : ${ param.pw } <br />
+	ì•„ì´ë”” : ${ param["id"] } <br />
+	ë¹„ë°€ë²ˆí˜¸ : ${ param["pw"] }
 	
 	<hr />
 	
@@ -32,7 +32,7 @@
 	
 	<hr />
 	
-	context ÃÊ±âÈ­ ÆÄ¶ó¹ÌÅÍ<br />
+	context ì´ˆê¸°í™” íŒŒë¼ë¯¸í„°<br />
 	${ initParam.con_name } <br />
 	${ initParam.con_id } <br />
 	${ initParam.con_pw } <br />
