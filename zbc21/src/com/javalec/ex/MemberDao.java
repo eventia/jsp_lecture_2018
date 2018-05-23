@@ -8,6 +8,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
  
+
+
 public class MemberDao {
 
 	public static final int MEMBER_NONEXISTENT  = 0;
@@ -198,6 +200,48 @@ public class MemberDao {
 		
 		return ri;
 	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	private Connection getConnection() {
 		

@@ -15,7 +15,7 @@
 		이름 : <input type="text" name="name" size="20"><br />
 		메일 : <input type="text" name="eMail" size="20"><br />
 		주소 : <input type="text" name="address" size="50"><br />
-		<input type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp; <input type="reset" value="취소" onclick="javascript:window.location='login.jsp'">
+		<input type="button" value="회원가입" onclick="infoConfirm()"> <input type="reset" value="취소" onclick="javascript:window.location='login.jsp'">
 	</form>
 </body>
 </html>

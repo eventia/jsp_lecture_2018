@@ -3,7 +3,7 @@ package com.javalec.ex;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Timestamp;
+// import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import javax.naming.Context;
@@ -12,6 +12,14 @@ import javax.sql.DataSource;
 
 public class MemberDao {
 
+
+	
+	
+	
+	
+	
+
+	
 	private static MemberDao instance = new MemberDao();
 	
 	private MemberDao() {
@@ -242,7 +250,7 @@ public class MemberDao {
 		Connection connection = null;
 		try {
 			context = new InitialContext();
-			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/Oracle11g");
+			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/orcl");
 			connection = dataSource.getConnection();
 		} catch (Exception e) {
 			e.printStackTrace();
