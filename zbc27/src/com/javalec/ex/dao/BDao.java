@@ -21,7 +21,7 @@ public class BDao {
 		
 		try {
 			Context context = new InitialContext();
-			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/Oracle11g");
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/orcl");
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

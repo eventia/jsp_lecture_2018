@@ -55,7 +55,7 @@ public class BFrontController extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("actionDo");
 		
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		
 		String viewPage = null;
 		BCommand command = null;
