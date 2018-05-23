@@ -10,9 +10,15 @@
 
 	<a href="insert.do">insert</a>
 	<hr />
+
 	<a href="http://localhost:8181<%=request.getContextPath()%>/update.do">update</a>
-	<hr />
+ 	<hr />
+
+<!--  경로    --> 
+<!-- 
 	<a href="http://localhost:8181/jsp_25_2_ex1_frontex/select.do">select</a>
+-->
+	<a href="http://localhost:8181/zbc25/select.do">select</a>
 	<hr />
 	<a href="<%=request.getContextPath()%>/delete.do">delete</a>
 

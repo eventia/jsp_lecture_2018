@@ -66,5 +66,4 @@ public class FrontCon extends HttpServlet {
 			System.out.println("----------------");
 		}
 	}
-
 }
