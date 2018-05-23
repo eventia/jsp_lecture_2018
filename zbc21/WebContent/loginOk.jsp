@@ -1,9 +1,9 @@
 <%@page import="com.javalec.ex.MemberDto"%>
 <%@page import="com.javalec.ex.MemberDao"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%
-	request.setCharacterEncoding("EUC-KR");
+	request.setCharacterEncoding("UTF-8");
 
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
@@ -13,14 +13,14 @@
 	if(checkNum == -1) {
 %>
 		<script language="javascript">
-			alert("���̵� �������� �ʽ��ϴ�.");
+			alert("아이디가 존재하지 않습니다.");
 			history.go(-1);
 		</script>
 <%
 	} else if(checkNum == 0) {
 %>
 		<script language="javascript">
-			alert("��й�ȣ�� Ʋ���ϴ�.");
+			alert("비밀번호가 틀립니다.");
 			history.go(-1);
 		</script>
 <%
@@ -30,7 +30,7 @@
 		if(dto == null) {
 %>
 		<script language="javascript">
-			alert("�������� �ʴ� ȸ�� �Դϴ�.");
+			alert("존재하지 않는 회원 입니다.");
 			history.go(-1);
 		</script>
 <%
