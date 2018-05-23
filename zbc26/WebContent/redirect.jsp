@@ -9,8 +9,8 @@
 <body>
 
 		<%
-			request.setAttribute("id", "abcde");
-			request.setAttribute("pw", "12345");
+//			request.setAttribute("id", "abcdef");
+//			request.setAttribute("pw", "123456");
 			
 			response.sendRedirect("RequestObj");
 		%>

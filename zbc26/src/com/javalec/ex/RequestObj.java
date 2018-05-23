@@ -45,8 +45,8 @@ public class RequestObj extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("actionDo");
 		
-		request.setAttribute("id", "abcde");
-		request.setAttribute("pw", "12345");
+		request.setAttribute("id", "abcd");
+		request.setAttribute("pw", "1234");
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/dispacherJsp.jsp");
 		dispatcher.forward(request, response);
